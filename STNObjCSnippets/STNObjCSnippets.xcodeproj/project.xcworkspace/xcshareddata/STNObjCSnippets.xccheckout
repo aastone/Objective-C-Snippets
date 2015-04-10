@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>04B4801A-771E-487E-952B-1D79C91A7E62</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BFF1756FE4AB817C71A93B10523736C0EB154EDA</key>
+		<string>https://github.com/aastone/Objective-C-Snippets.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>STNObjCSnippets/STNObjCSnippets.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BFF1756FE4AB817C71A93B10523736C0EB154EDA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/aastone/Objective-C-Snippets.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BFF1756FE4AB817C71A93B10523736C0EB154EDA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BFF1756FE4AB817C71A93B10523736C0EB154EDA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Objective-C-Snippets</string>
+		</dict>
+	</array>
+</dict>
+</plist>
