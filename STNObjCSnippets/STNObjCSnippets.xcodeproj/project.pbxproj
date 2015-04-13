@@ -15,6 +15,9 @@
 		8E2DA94E1AD6882900E95F39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E2DA94C1AD6882900E95F39 /* LaunchScreen.xib */; };
 		8E2DA95A1AD6882900E95F39 /* STNObjCSnippetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DA9591AD6882900E95F39 /* STNObjCSnippetsTests.m */; };
 		8E2DA9661AD762C300E95F39 /* STNCheckNetworkConnectOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DA9651AD762C300E95F39 /* STNCheckNetworkConnectOperation.m */; };
+		8E8933131ADB9B6E002B343F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E8933111ADB9B6E002B343F /* Model.xcdatamodeld */; };
+		8E89331A1ADBA0DA002B343F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8933191ADBA0DA002B343F /* CoreData.framework */; };
+		8E89331D1ADBA1E7002B343F /* STNMsgEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E89331C1ADBA1E7002B343F /* STNMsgEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,10 @@
 		8E2DA9591AD6882900E95F39 /* STNObjCSnippetsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STNObjCSnippetsTests.m; sourceTree = "<group>"; };
 		8E2DA9641AD762C300E95F39 /* STNCheckNetworkConnectOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STNCheckNetworkConnectOperation.h; path = "NSOperation+block/STNCheckNetworkConnectOperation.h"; sourceTree = "<group>"; };
 		8E2DA9651AD762C300E95F39 /* STNCheckNetworkConnectOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STNCheckNetworkConnectOperation.m; path = "NSOperation+block/STNCheckNetworkConnectOperation.m"; sourceTree = "<group>"; };
+		8E8933121ADB9B6E002B343F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		8E8933191ADBA0DA002B343F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8E89331B1ADBA1E7002B343F /* STNMsgEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STNMsgEntity.h; path = CoreData/STNMsgEntity.h; sourceTree = "<group>"; };
+		8E89331C1ADBA1E7002B343F /* STNMsgEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STNMsgEntity.m; path = CoreData/STNMsgEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E89331A1ADBA0DA002B343F /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +74,9 @@
 		8E2DA9311AD6882900E95F39 = {
 			isa = PBXGroup;
 			children = (
+				8E8933191ADBA0DA002B343F /* CoreData.framework */,
 				8E2DA93C1AD6882900E95F39 /* STNObjCSnippets */,
+				8E8933141ADBA07D002B343F /* Framework */,
 				8E2DA9561AD6882900E95F39 /* STNObjCSnippetsTests */,
 				8E2DA93B1AD6882900E95F39 /* Products */,
 			);
@@ -84,9 +94,11 @@
 		8E2DA93C1AD6882900E95F39 /* STNObjCSnippets */ = {
 			isa = PBXGroup;
 			children = (
+				8E8933101ADB9B04002B343F /* CoreData */,
 				8E2DA9631AD6885A00E95F39 /* NSOperation+block */,
 				8E2DA9441AD6882900E95F39 /* ViewController.h */,
 				8E2DA9451AD6882900E95F39 /* ViewController.m */,
+				8E8933111ADB9B6E002B343F /* Model.xcdatamodeld */,
 				8E2DA93D1AD6882900E95F39 /* Supporting Files */,
 			);
 			path = STNObjCSnippets;
@@ -130,6 +142,22 @@
 				8E2DA9651AD762C300E95F39 /* STNCheckNetworkConnectOperation.m */,
 			);
 			name = "NSOperation+block";
+			sourceTree = "<group>";
+		};
+		8E8933101ADB9B04002B343F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8E89331B1ADBA1E7002B343F /* STNMsgEntity.h */,
+				8E89331C1ADBA1E7002B343F /* STNMsgEntity.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		8E8933141ADBA07D002B343F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E89331D1ADBA1E7002B343F /* STNMsgEntity.m in Sources */,
 				8E2DA9661AD762C300E95F39 /* STNCheckNetworkConnectOperation.m in Sources */,
 				8E2DA9461AD6882900E95F39 /* ViewController.m in Sources */,
+				8E8933131ADB9B6E002B343F /* Model.xcdatamodeld in Sources */,
 				8E2DA9431AD6882900E95F39 /* AppDelegate.m in Sources */,
 				8E2DA9401AD6882900E95F39 /* main.m in Sources */,
 			);
@@ -432,6 +462,7 @@
 				8E2DA95F1AD6882900E95F39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E2DA9601AD6882900E95F39 /* Build configuration list for PBXNativeTarget "STNObjCSnippetsTests" */ = {
 			isa = XCConfigurationList;
@@ -440,8 +471,22 @@
 				8E2DA9621AD6882900E95F39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8E8933111ADB9B6E002B343F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8E8933121ADB9B6E002B343F /* Model.xcdatamodel */,
+			);
+			currentVersion = 8E8933121ADB9B6E002B343F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8E2DA9321AD6882900E95F39 /* Project object */;
 }
