@@ -18,6 +18,7 @@
 		8E8933131ADB9B6E002B343F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E8933111ADB9B6E002B343F /* Model.xcdatamodeld */; };
 		8E89331A1ADBA0DA002B343F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8933191ADBA0DA002B343F /* CoreData.framework */; };
 		8E89331D1ADBA1E7002B343F /* STNMsgEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E89331C1ADBA1E7002B343F /* STNMsgEntity.m */; };
+		8E98B2641D016E7100EAEFF1 /* STNBlockTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E98B2631D016E7100EAEFF1 /* STNBlockTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		8E8933191ADBA0DA002B343F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8E89331B1ADBA1E7002B343F /* STNMsgEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STNMsgEntity.h; path = CoreData/STNMsgEntity.h; sourceTree = "<group>"; };
 		8E89331C1ADBA1E7002B343F /* STNMsgEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STNMsgEntity.m; path = CoreData/STNMsgEntity.m; sourceTree = "<group>"; };
+		8E98B2621D016E7100EAEFF1 /* STNBlockTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STNBlockTimer.h; path = "NSTimer+block/STNBlockTimer.h"; sourceTree = "<group>"; };
+		8E98B2631D016E7100EAEFF1 /* STNBlockTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STNBlockTimer.m; path = "NSTimer+block/STNBlockTimer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,7 @@
 		8E2DA93C1AD6882900E95F39 /* STNObjCSnippets */ = {
 			isa = PBXGroup;
 			children = (
+				8E98B2611D016E2300EAEFF1 /* NSTimer+block */,
 				8E8933101ADB9B04002B343F /* CoreData */,
 				8E2DA9631AD6885A00E95F39 /* NSOperation+block */,
 				8E2DA9441AD6882900E95F39 /* ViewController.h */,
@@ -158,6 +162,15 @@
 			children = (
 			);
 			name = Framework;
+			sourceTree = "<group>";
+		};
+		8E98B2611D016E2300EAEFF1 /* NSTimer+block */ = {
+			isa = PBXGroup;
+			children = (
+				8E98B2621D016E7100EAEFF1 /* STNBlockTimer.h */,
+				8E98B2631D016E7100EAEFF1 /* STNBlockTimer.m */,
+			);
+			name = "NSTimer+block";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E89331D1ADBA1E7002B343F /* STNMsgEntity.m in Sources */,
+				8E98B2641D016E7100EAEFF1 /* STNBlockTimer.m in Sources */,
 				8E2DA9661AD762C300E95F39 /* STNCheckNetworkConnectOperation.m in Sources */,
 				8E2DA9461AD6882900E95F39 /* ViewController.m in Sources */,
 				8E8933131ADB9B6E002B343F /* Model.xcdatamodeld in Sources */,
