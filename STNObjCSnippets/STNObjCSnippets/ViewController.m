@@ -9,8 +9,11 @@
 #import "ViewController.h"
 #import "STNCheckNetworkConnectOperation.h"
 #import "STNMsgEntity.h"
+#import "STNBlockTimer.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) STNBlockTimer *timer;
 
 @end
 
@@ -19,13 +22,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self addButton];
+    [self addStopBtn];
     // NSOperation+block
 //    [self checkNetworkConnectOperation];
     
     //CoreData
-    _myAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    _myAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [self blockTimer];
 }
+
+#pragma mark - NSTimer + block
+
+- (void)blockTimer
+{
+    _timer = [[STNBlockTimer alloc] init];
+    [_timer start];
+}
+
+- (void)addStopBtn
+{
+    UIButton *btnA = [UIButton buttonWithType:UIButtonTypeCustom];
+    btnA.frame = CGRectMake(80, 200, 80, 40);
+    [btnA setTitle:@"Stop" forState:UIControlStateNormal];
+    [btnA setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btnA addTarget:self action:@selector(stopTimer) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btnA];
+}
+
+- (void)stopTimer
+{
+    [_timer stop];
+}
+
+#pragma mark - 
 
 - (void)addButton
 {

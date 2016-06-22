@@ -14,10 +14,6 @@ typedef void (^STNTimerBlock)(NSTimer *timer);
 
 @interface STNBlockTimer ()
 
-- (void)start;
-
-- (void)stop;
-
 @end
 
 @implementation STNBlockTimer
@@ -25,29 +21,42 @@ typedef void (^STNTimerBlock)(NSTimer *timer);
     NSTimer *timer;
 }
 
+- (id)init
+{
+    return [super init];
+}
+
 - (void)start
 {
-//    timer = [NSTimer scheduledTimerWithTimeInterval:SELF_EXECUTING target:self selector:@selector(doSomething) userInfo:nil repeats:YES];
-    
+    NSLog(@"start");
     __weak STNBlockTimer *weakSelf = self;
     
     timer = [STNBlockTimer scheduledTimerWithInterval:5 repeats:YES usingBlock:^{
-        [weakSelf doSomething];
+        STNBlockTimer *strongSelf = weakSelf;
+        [strongSelf doSomething];
     }];
+}
+
+- (void)stop
+{
+    NSLog(@"stop");
+    [timer invalidate];
+    timer = nil;
 }
 
 - (void)doSomething
 {
-    
+    NSLog(@"doSomething");
 }
 
 + (NSTimer *)scheduledTimerWithInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats usingBlock:(void (^)())fireBlock
 {
-    return [self scheduledTimerWithTimeInterval:seconds target:self selector:@selector(xx_blockInvoke:) userInfo:[fireBlock copy] repeats:repeats];
+    return [NSTimer scheduledTimerWithTimeInterval:seconds target:self selector:@selector(xx_blockInvoke:) userInfo:[fireBlock copy] repeats:repeats];
 }
 
 + (void)xx_blockInvoke:(NSTimer *)timer
 {
+    NSLog(@"xx_blockInvoke");
     void (^block)() = timer.userInfo;
     if (block) {
         block();

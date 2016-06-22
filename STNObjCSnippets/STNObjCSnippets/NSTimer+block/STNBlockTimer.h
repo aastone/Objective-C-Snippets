@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface STNBlockTimer : NSTimer
+@interface STNBlockTimer : NSObject
 
 + (NSTimer *)scheduledTimerWithInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats usingBlock:(void (^)())fireBlock;
 
-//+ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL *)repeats usingBlock:(void (^)(NSTimer *timer))fireBlock;
+- (void)start;
+
+- (void)stop;
 
 @end
